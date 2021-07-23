@@ -9,5 +9,9 @@ In the project directory, you can run:
 ### `npm run build`
 
 
-## Docker run
+## Para ejeutar el sistema con docker , lo hacemos a taves del sisguiente comando
+## Los requerimientos son: docker, docker-compose
+## Internamente ejecuta 2 servicios, la api y una bd de mongo con la que funciona la api
+## El api expone el puerto 3000
+
 docker-compose up
