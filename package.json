@@ -1,0 +1,38 @@
+{
+  "name": "leantech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch index.js --watch src --watch .env --ignore 'src/*.spec.js' index.js",
+    "test": "mocha src/**/*.spec.js || true",
+    "lint": "eslint . --ext .js,.spec.js || true",
+    "lint:fix": "eslint . --ext .js,.spec.js --fix || true"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-mocha": "^9.0.0",
+    "mocha": "^9.0.2",
+    "mongodb-memory-server": "^7.3.1",
+    "nodemon": "^2.0.12",
+    "sinon": "^11.1.1"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.1",
+    "logger": "0.0.1",
+    "mongoose": "^5.13.3",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.5",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.5"
+  }
+}

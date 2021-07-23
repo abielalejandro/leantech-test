@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: leantech-app
+    command: npm start
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+        - mongo
+    networks:
+      - leantech
+  mongo:
+    container_name: leantech-db
+    image: mongo
+    networks:
+      - leantech
+networks:
+  leantech:
+    driver: bridge
